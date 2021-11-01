@@ -5,7 +5,7 @@ LABEL maintainer "Bitnami <containers@bitnami.com>"
 
 ENV HOME="/" \
     OS_ARCH="amd64" \
-    OS_FLAVOUR="debian-10" \
+    OS_FLAVOUR="ubi-8" \
     OS_NAME="linux"
 
 COPY prebuildfs /
