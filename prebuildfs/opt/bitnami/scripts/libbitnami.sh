@@ -1,4 +1,3 @@
-
 #!/bin/bash
 #
 # Bitnami custom library
@@ -49,3 +48,4 @@ print_image_welcome_page() {
     log "Submit issues and feature requests at ${BOLD}${github_url}/issues${RESET}"
     log ""
 }
+
