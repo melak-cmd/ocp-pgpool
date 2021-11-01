@@ -10,7 +10,8 @@ ENV HOME="/" \
 
 COPY prebuildfs /
 # Install required system packages and dependencies
-RUN install_packages acl ca-certificates curl gzip tar libc6
+RUN install_packages acl ca-certificates curl gzip tar
+RUN . /opt/bitnami/scripts/libcomponent.sh && component_unpack "postgresql-repmgr" "14.0.0-4" --checksum 1a5bc3d48132b3cac7797d18b7cbe939fd3ee95db3538a75ae62a159f0f1ca96
 
 COPY rootfs /
 
