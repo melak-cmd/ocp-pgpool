@@ -1,6 +1,6 @@
 ARG RHEL_VERSION=8
 
-FROM registry.access.redhat.com/ubi${RHEL_VERSION}/ubi
+FROM registry.access.redhat.com/ubi8/ubi
 LABEL maintainer "Bitnami <containers@bitnami.com>"
 
 ENV HOME="/" \
