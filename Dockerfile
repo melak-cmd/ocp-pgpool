@@ -11,7 +11,7 @@ ENV HOME="/" \
 COPY prebuildfs /
 # Install required system packages and dependencies
 RUN install_packages acl ca-certificates curl gzip tar
-RUN . /opt/bitnami/scripts/libcomponent.sh && component_unpack "postgresql-repmgr" "14.0.0-4" --checksum 1a5bc3d48132b3cac7797d18b7cbe939fd3ee95db3538a75ae62a159f0f1ca96
+RUN yum install -y -q /opt/repmgr_14-5.3.0-1.rhel8.x86_64.rpm
 
 COPY rootfs /
 
