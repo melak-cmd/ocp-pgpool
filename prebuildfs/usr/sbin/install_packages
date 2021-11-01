@@ -8,7 +8,7 @@ until [ $n -gt $max ]; do
     set +e
     (
       yum update -y -q &&
-      yum install -y -q --no-install-recommends "$@" &&
+      yum install -y -q &&
       yum clean all -q
     )
     CODE=$?
