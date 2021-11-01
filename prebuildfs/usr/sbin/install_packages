@@ -7,9 +7,7 @@ max=2
 until [ $n -gt $max ]; do
     set +e
     (
-      yum update -y -q &&
-      yum install -y -q &&
-      yum clean all -q
+      yum install -y -q "$@"
     )
     CODE=$?
     set -e
