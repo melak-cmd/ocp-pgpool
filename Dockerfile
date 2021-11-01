@@ -10,7 +10,7 @@ ENV HOME="/" \
 
 COPY prebuildfs /
 # Install required system packages and dependencies
-RUN install_packages curl gzip tar
+RUN install_packages acl ca-certificates curl gzip tar
 
 COPY rootfs /
 
