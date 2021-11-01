@@ -1,4 +1,6 @@
-FROM docker.io/bitnami/minideb:buster
+ARG RHEL_VERSION=8
+
+FROM registry.access.redhat.com/ubi${RHEL_VERSION}/ubi
 LABEL maintainer "Bitnami <containers@bitnami.com>"
 
 ENV HOME="/" \
