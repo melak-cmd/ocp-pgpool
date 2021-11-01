@@ -1,6 +1,6 @@
 ARG RHEL_VERSION=8
 
-FROM registry.access.redhat.com/ubi8/ubi:8.4-211
+FROM registry.access.redhat.com/ubi8/ubi
 LABEL maintainer "Bitnami <containers@bitnami.com>"
 
 ENV HOME="/" \
@@ -10,7 +10,7 @@ ENV HOME="/" \
 
 COPY prebuildfs /
 # Install required system packages and dependencies
-RUN install_packages acl ca-certificates curl gzip tar
+RUN install_packages acl ca-certificates curl gzip tar libbsd0
 
 COPY rootfs /
 
